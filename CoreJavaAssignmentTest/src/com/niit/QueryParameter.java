@@ -5,9 +5,47 @@ import java.util.List;
 public class QueryParameter 
 {
 	
-	private String baseQuery, filePath;
+	private String baseQuery;
 	
-	private List<CriteriaQuery>  restrictions;
+	private String filePath;
+	private String field;
+	public String getField() {
+		return field;
+	}
+
+	public void setField(String field) {
+		this.field = field;
+	}
+
+	private String where;
+	private String groupBy;
+	private String orderBy;
+	
+	//private List<CriteriaQuery>  restrictions;
+
+	public String getWhere() {
+		return where;
+	}
+
+	public void setWhere(String where) {
+		this.where = where;
+	}
+
+	public String getGroupBy() {
+		return groupBy;
+	}
+
+	public void setGroupBy(String groupBy) {
+		this.groupBy = groupBy;
+	}
+
+	public String getOrderBy() {
+		return orderBy;
+	}
+
+	public void setOrderBy(String orderBy) {
+		this.orderBy = orderBy;
+	}
 
 	public String getBaseQuery() {
 		return baseQuery;
@@ -25,14 +63,14 @@ public class QueryParameter
 		this.filePath = filePath;
 	}
 
-	public List<CriteriaQuery> getRestrictions() {
+	/*public List<CriteriaQuery> getRestrictions() {
 		return restrictions;
 	}
 
 	public void setRestrictions(List<CriteriaQuery> restrictions) {
 		this.restrictions = restrictions;
 	}
-	
+*/	
 	
 	
 

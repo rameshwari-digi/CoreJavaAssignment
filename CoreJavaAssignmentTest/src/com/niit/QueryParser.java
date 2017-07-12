@@ -3,7 +3,7 @@ package com.niit;
 public class QueryParser 
 {
 	
-	String mainquery, filepath, wherecondition;
+	//String mainquery, filepath, wherecondition;
 	
 	CriteriaQuery criteriaQuery = new CriteriaQuery();
 	public QueryParameter splitQuery(String inputqry)
