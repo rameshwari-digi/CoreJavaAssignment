@@ -21,11 +21,14 @@ public class QueryParser
 					System.out.println(filepath);
 					System.out.println(mainquery[1]);
 					*/
-					
-				queryParameter.setBaseQuery(inputqry.split("where")[0]);
+					String[] querySplit = inputqry.split("where");
+				queryParameter.setBaseQuery(querySplit[0]);
 				queryParameter.setFilePath(queryParameter.getBaseQuery().split("from")[1]);
 				
-				this.comparsionEvaluationProcessing(queryParameter.getBaseQuery().split("where")[0]);			
+				
+				System.out.println("first : "+querySplit[0]);
+				System.out.println("second : "+querySplit[1]);
+				this.comparsionEvaluationProcessing(querySplit[1]);			
 				System.out.println(queryParameter.getBaseQuery());
 				//System.out.println(queryParameter.getBaseQuery().split("from")[1]);
 				System.out.println(queryParameter.getFilePath());
@@ -44,7 +47,7 @@ public class QueryParser
 	
 	public CriteriaQuery comparsionEvaluationProcessing(String comparsionquery)
 	{
-		
+		System.out.println("Comparison : "+comparsionquery);
 		String operatorssymbol[]={">","<",">=","<=","=","!="};
 		
 		for(String operator : operatorssymbol)
@@ -53,6 +56,7 @@ public class QueryParser
 			{
 				
 				criteriaQuery.setPropertyName(comparsionquery.split(operator)[0].trim());
+				System.out.println(comparsionquery.split(operator)[1].trim());
 				criteriaQuery.setPropertyValue(comparsionquery.split(operator)[1].trim());
 				criteriaQuery.setConditionString(operator);
 				

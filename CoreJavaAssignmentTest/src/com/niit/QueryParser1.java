@@ -13,7 +13,7 @@ public class QueryParser1
 			{
 				
 				String columns[] = baseQuery[1].split("from");
-				queryParameter.setField(columns[0].trim());
+				queryParameter.setField(columns[1].trim());
 				
 				String querycondition[]=columns[1].split("where");
 				queryParameter.setField(querycondition[0].trim());

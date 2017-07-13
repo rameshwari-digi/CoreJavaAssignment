@@ -14,11 +14,11 @@ public class InputProcessing
 		
 		String inputqry = input.nextLine();
 		
-		/*QueryParser qp = new QueryParser();
+		QueryParser qp = new QueryParser();
 		qp.splitQuery(inputqry);
-	*/
 	
+	/*
 		QueryParser1 qp1 = new QueryParser1();
-		qp1.splitQuery(inputqry);
+		qp1.splitQuery(inputqry);*/
 	}
 }
